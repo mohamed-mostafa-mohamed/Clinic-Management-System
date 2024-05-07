@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Service\Patient_appo_Repo\**" />
+    <Compile Remove="Service\Patient_appo_Service\**" />
+    <EmbeddedResource Remove="Service\Patient_appo_Repo\**" />
+    <EmbeddedResource Remove="Service\Patient_appo_Service\**" />
+    <None Remove="Service\Patient_appo_Repo\**" />
+    <None Remove="Service\Patient_appo_Service\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\APP_DA\APP_DAL.csproj" />
+  </ItemGroup>
+
+</Project>
